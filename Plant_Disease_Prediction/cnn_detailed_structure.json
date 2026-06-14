@@ -1,0 +1,568 @@
+[
+  {
+    "Index": 0,
+    "Layer Name": "conv2d",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      128,
+      128,
+      3
+    ],
+    "Output Shape": [
+      null,
+      128,
+      128,
+      32
+    ],
+    "Trainable": true,
+    "Param #": 896,
+    "Activation": "relu",
+    "Filters": 32,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "same",
+    "Use Bias": true
+  },
+  {
+    "Index": 1,
+    "Layer Name": "conv2d_1",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      128,
+      128,
+      32
+    ],
+    "Output Shape": [
+      null,
+      126,
+      126,
+      32
+    ],
+    "Trainable": true,
+    "Param #": 9248,
+    "Activation": "relu",
+    "Filters": 32,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "valid",
+    "Use Bias": true
+  },
+  {
+    "Index": 2,
+    "Layer Name": "max_pooling2d",
+    "Layer Type": "MaxPooling2D",
+    "Input Shape": [
+      null,
+      126,
+      126,
+      32
+    ],
+    "Output Shape": [
+      null,
+      63,
+      63,
+      32
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Pool Size": [
+      2,
+      2
+    ],
+    "Strides": [
+      2,
+      2
+    ],
+    "Padding": "valid"
+  },
+  {
+    "Index": 3,
+    "Layer Name": "conv2d_2",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      63,
+      63,
+      32
+    ],
+    "Output Shape": [
+      null,
+      63,
+      63,
+      64
+    ],
+    "Trainable": true,
+    "Param #": 18496,
+    "Activation": "relu",
+    "Filters": 64,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "same",
+    "Use Bias": true
+  },
+  {
+    "Index": 4,
+    "Layer Name": "conv2d_3",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      63,
+      63,
+      64
+    ],
+    "Output Shape": [
+      null,
+      61,
+      61,
+      64
+    ],
+    "Trainable": true,
+    "Param #": 36928,
+    "Activation": "relu",
+    "Filters": 64,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "valid",
+    "Use Bias": true
+  },
+  {
+    "Index": 5,
+    "Layer Name": "max_pooling2d_1",
+    "Layer Type": "MaxPooling2D",
+    "Input Shape": [
+      null,
+      61,
+      61,
+      64
+    ],
+    "Output Shape": [
+      null,
+      30,
+      30,
+      64
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Pool Size": [
+      2,
+      2
+    ],
+    "Strides": [
+      2,
+      2
+    ],
+    "Padding": "valid"
+  },
+  {
+    "Index": 6,
+    "Layer Name": "conv2d_4",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      30,
+      30,
+      64
+    ],
+    "Output Shape": [
+      null,
+      30,
+      30,
+      128
+    ],
+    "Trainable": true,
+    "Param #": 73856,
+    "Activation": "relu",
+    "Filters": 128,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "same",
+    "Use Bias": true
+  },
+  {
+    "Index": 7,
+    "Layer Name": "conv2d_5",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      30,
+      30,
+      128
+    ],
+    "Output Shape": [
+      null,
+      28,
+      28,
+      128
+    ],
+    "Trainable": true,
+    "Param #": 147584,
+    "Activation": "relu",
+    "Filters": 128,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "valid",
+    "Use Bias": true
+  },
+  {
+    "Index": 8,
+    "Layer Name": "max_pooling2d_2",
+    "Layer Type": "MaxPooling2D",
+    "Input Shape": [
+      null,
+      28,
+      28,
+      128
+    ],
+    "Output Shape": [
+      null,
+      14,
+      14,
+      128
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Pool Size": [
+      2,
+      2
+    ],
+    "Strides": [
+      2,
+      2
+    ],
+    "Padding": "valid"
+  },
+  {
+    "Index": 9,
+    "Layer Name": "conv2d_6",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      14,
+      14,
+      128
+    ],
+    "Output Shape": [
+      null,
+      14,
+      14,
+      256
+    ],
+    "Trainable": true,
+    "Param #": 295168,
+    "Activation": "relu",
+    "Filters": 256,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "same",
+    "Use Bias": true
+  },
+  {
+    "Index": 10,
+    "Layer Name": "conv2d_7",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      14,
+      14,
+      256
+    ],
+    "Output Shape": [
+      null,
+      12,
+      12,
+      256
+    ],
+    "Trainable": true,
+    "Param #": 590080,
+    "Activation": "relu",
+    "Filters": 256,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "valid",
+    "Use Bias": true
+  },
+  {
+    "Index": 11,
+    "Layer Name": "max_pooling2d_3",
+    "Layer Type": "MaxPooling2D",
+    "Input Shape": [
+      null,
+      12,
+      12,
+      256
+    ],
+    "Output Shape": [
+      null,
+      6,
+      6,
+      256
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Pool Size": [
+      2,
+      2
+    ],
+    "Strides": [
+      2,
+      2
+    ],
+    "Padding": "valid"
+  },
+  {
+    "Index": 12,
+    "Layer Name": "conv2d_8",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      6,
+      6,
+      256
+    ],
+    "Output Shape": [
+      null,
+      6,
+      6,
+      512
+    ],
+    "Trainable": true,
+    "Param #": 1180160,
+    "Activation": "relu",
+    "Filters": 512,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "same",
+    "Use Bias": true
+  },
+  {
+    "Index": 13,
+    "Layer Name": "conv2d_9",
+    "Layer Type": "Conv2D",
+    "Input Shape": [
+      null,
+      6,
+      6,
+      512
+    ],
+    "Output Shape": [
+      null,
+      4,
+      4,
+      512
+    ],
+    "Trainable": true,
+    "Param #": 2359808,
+    "Activation": "relu",
+    "Filters": 512,
+    "Kernel Size": [
+      3,
+      3
+    ],
+    "Strides": [
+      1,
+      1
+    ],
+    "Padding": "valid",
+    "Use Bias": true
+  },
+  {
+    "Index": 14,
+    "Layer Name": "max_pooling2d_4",
+    "Layer Type": "MaxPooling2D",
+    "Input Shape": [
+      null,
+      4,
+      4,
+      512
+    ],
+    "Output Shape": [
+      null,
+      2,
+      2,
+      512
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Pool Size": [
+      2,
+      2
+    ],
+    "Strides": [
+      2,
+      2
+    ],
+    "Padding": "valid"
+  },
+  {
+    "Index": 15,
+    "Layer Name": "dropout",
+    "Layer Type": "Dropout",
+    "Input Shape": [
+      null,
+      2,
+      2,
+      512
+    ],
+    "Output Shape": [
+      null,
+      2,
+      2,
+      512
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Rate": 0.25
+  },
+  {
+    "Index": 16,
+    "Layer Name": "flatten",
+    "Layer Type": "Flatten",
+    "Input Shape": [
+      null,
+      2,
+      2,
+      512
+    ],
+    "Output Shape": [
+      null,
+      2048
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Data Format": "channels_last"
+  },
+  {
+    "Index": 17,
+    "Layer Name": "dense",
+    "Layer Type": "Dense",
+    "Input Shape": [
+      null,
+      2048
+    ],
+    "Output Shape": [
+      null,
+      1500
+    ],
+    "Trainable": true,
+    "Param #": 3073500,
+    "Activation": "relu",
+    "Units": 1500,
+    "Use Bias": true
+  },
+  {
+    "Index": 18,
+    "Layer Name": "dense_1",
+    "Layer Type": "Dense",
+    "Input Shape": [
+      null,
+      1500
+    ],
+    "Output Shape": [
+      null,
+      1500
+    ],
+    "Trainable": true,
+    "Param #": 2251500,
+    "Activation": "relu",
+    "Units": 1500,
+    "Use Bias": true
+  },
+  {
+    "Index": 19,
+    "Layer Name": "dropout_1",
+    "Layer Type": "Dropout",
+    "Input Shape": [
+      null,
+      1500
+    ],
+    "Output Shape": [
+      null,
+      1500
+    ],
+    "Trainable": true,
+    "Param #": 0,
+    "Activation": null,
+    "Rate": 0.4
+  },
+  {
+    "Index": 20,
+    "Layer Name": "dense_2",
+    "Layer Type": "Dense",
+    "Input Shape": [
+      null,
+      1500
+    ],
+    "Output Shape": [
+      null,
+      38
+    ],
+    "Trainable": true,
+    "Param #": 57038,
+    "Activation": "softmax",
+    "Units": 38,
+    "Use Bias": true
+  }
+]

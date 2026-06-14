@@ -1,0 +1,22 @@
+Index,Layer Name,Layer Type,Input Shape,Output Shape,Trainable,Param #,Activation,Filters,Kernel Size,Strides,Padding,Use Bias,Pool Size,Rate,Data Format,Units
+0,conv2d,Conv2D,"(None, 128, 128, 3)","(None, 128, 128, 32)",True,896,relu,32.0,"(3, 3)","(1, 1)",same,True,,,,
+1,conv2d_1,Conv2D,"(None, 128, 128, 32)","(None, 126, 126, 32)",True,9248,relu,32.0,"(3, 3)","(1, 1)",valid,True,,,,
+2,max_pooling2d,MaxPooling2D,"(None, 126, 126, 32)","(None, 63, 63, 32)",True,0,,,,"(2, 2)",valid,,"(2, 2)",,,
+3,conv2d_2,Conv2D,"(None, 63, 63, 32)","(None, 63, 63, 64)",True,18496,relu,64.0,"(3, 3)","(1, 1)",same,True,,,,
+4,conv2d_3,Conv2D,"(None, 63, 63, 64)","(None, 61, 61, 64)",True,36928,relu,64.0,"(3, 3)","(1, 1)",valid,True,,,,
+5,max_pooling2d_1,MaxPooling2D,"(None, 61, 61, 64)","(None, 30, 30, 64)",True,0,,,,"(2, 2)",valid,,"(2, 2)",,,
+6,conv2d_4,Conv2D,"(None, 30, 30, 64)","(None, 30, 30, 128)",True,73856,relu,128.0,"(3, 3)","(1, 1)",same,True,,,,
+7,conv2d_5,Conv2D,"(None, 30, 30, 128)","(None, 28, 28, 128)",True,147584,relu,128.0,"(3, 3)","(1, 1)",valid,True,,,,
+8,max_pooling2d_2,MaxPooling2D,"(None, 28, 28, 128)","(None, 14, 14, 128)",True,0,,,,"(2, 2)",valid,,"(2, 2)",,,
+9,conv2d_6,Conv2D,"(None, 14, 14, 128)","(None, 14, 14, 256)",True,295168,relu,256.0,"(3, 3)","(1, 1)",same,True,,,,
+10,conv2d_7,Conv2D,"(None, 14, 14, 256)","(None, 12, 12, 256)",True,590080,relu,256.0,"(3, 3)","(1, 1)",valid,True,,,,
+11,max_pooling2d_3,MaxPooling2D,"(None, 12, 12, 256)","(None, 6, 6, 256)",True,0,,,,"(2, 2)",valid,,"(2, 2)",,,
+12,conv2d_8,Conv2D,"(None, 6, 6, 256)","(None, 6, 6, 512)",True,1180160,relu,512.0,"(3, 3)","(1, 1)",same,True,,,,
+13,conv2d_9,Conv2D,"(None, 6, 6, 512)","(None, 4, 4, 512)",True,2359808,relu,512.0,"(3, 3)","(1, 1)",valid,True,,,,
+14,max_pooling2d_4,MaxPooling2D,"(None, 4, 4, 512)","(None, 2, 2, 512)",True,0,,,,"(2, 2)",valid,,"(2, 2)",,,
+15,dropout,Dropout,"(None, 2, 2, 512)","(None, 2, 2, 512)",True,0,,,,,,,,0.25,,
+16,flatten,Flatten,"(None, 2, 2, 512)","(None, 2048)",True,0,,,,,,,,,channels_last,
+17,dense,Dense,"(None, 2048)","(None, 1500)",True,3073500,relu,,,,,True,,,,1500.0
+18,dense_1,Dense,"(None, 1500)","(None, 1500)",True,2251500,relu,,,,,True,,,,1500.0
+19,dropout_1,Dropout,"(None, 1500)","(None, 1500)",True,0,,,,,,,,0.4,,
+20,dense_2,Dense,"(None, 1500)","(None, 38)",True,57038,softmax,,,,,True,,,,38.0
